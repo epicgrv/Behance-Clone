@@ -16,7 +16,7 @@ import {
 // so you use their class names directly like <i className="bi bi-search"></i>
 
 function App() {
-  // Dummy data for project cards, adjusted to match screenshot titles/stats
+  // dummy data for project cards
   const projects = [
     {
       id: 1,
