@@ -1,0 +1,48 @@
+/* You can add any custom global CSS here, or leave it mostly empty
+   as Bootstrap handles most of the styling. */
+
+   body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Using the Inter font imported in index.html */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  /* Custom CSS to mimic Behance's hover effects and ensure roundness for buttons/cards */
+  /* These styles are also directly embedded in App.js for self-containment,
+     but can be moved here if preferred for global application. */
+  
+  .hover-bg-light:hover {
+    background-color: #f8f9fa !important; /* light background on hover */
+  }
+  
+  .hover-opacity-100:hover {
+    opacity: 1 !important;
+  }
+  
+  .transition-opacity {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .project-card-hover:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important; /* Stronger shadow */
+  }
+  .project-card-hover {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  /* Basic z-index for sticky header */
+  .z-index-100 {
+      z-index: 100;
+  }
+  
+  /* Hide the default dropdown arrow if we're using a custom one */
+  .dropdown-toggle::after {
+      display: none !important;
+  }
