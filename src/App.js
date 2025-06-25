@@ -151,12 +151,47 @@ function App() {
                   style={{ width: '28px', height: '28px' }}
                   onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/28x28/cccccc/ffffff?text=A`; }}
                 />
-              </Dropdown.Toggle>
-              <Dropdown.Menu align="end"> 
-                <Dropdown.Item href="#">Adobe Portfolio</Dropdown.Item>
-                <Dropdown.Item href="#">Creative Cloud</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+              {showAdobePopover && (
+                <div className="adobe-custom-popover position-absolute bg-white shadow rounded-lg p-3"
+                     style={{ top: '100%', right: '0', marginTop: '8px', minWidth: '280px', zIndex: '1001' }}></div>
+                     {/* Go to adobe.com section */}
+                  <a href="https://www.adobe.com" target="_blank" rel="noopener noreferrer" className="d-flex align-items-center text-decoration-none text-dark py-2 px-3 rounded hover-bg-light">
+                   <img
+                    src="/adobered.png"
+                    alt="Adobe Logo"
+                    style={{ width: '24px', height: '24px' }}
+                    className="me-2"
+                    onError={(e) => { e.target.onerror = null; e.target.src = `https://placehold.co/24x24/cccccc/ffffff?text=A`; }}
+                   />
+                   <div className="flex-grow-1">
+                      <div className="fw-semibold small">Go to adobe.com</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Access your apps, services, files, and more</div>
+                   </div>
+                   <i className="bi bi-arrow-right ms-auto text-muted"></i>
+                  </a>
+
+                  {/* Get Adobe Express free section */}
+                  <a href="#" className="d-flex align-items-center text-decoration-none text-dark py-2 px-3 rounded mt-2 hover-bg-light">
+                    <i className="bi bi-star-fill text-warning me-2 fs-5"></i> {/* Sparkle/Star icon */}
+                    <div className="flex-grow-1">
+                      <div className="fw-semibold small">Get Adobe Express free</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Quickly make content from thousands of free templates</div>
+                    </div>
+                    <i className="bi bi-arrow-right ms-auto text-muted"></i>
+                  </a>
+
+                  {/* Behance Pro trial section */}
+                  <a href="#" className="d-flex align-items-center text-decoration-none text-dark py-2 px-3 rounded mt-2 hover-bg-light">
+                    <Navbar.Brand href="#" className="fw-bold text-dark me-2 fs-6 p-0">Bē</Navbar.Brand>
+                    <div className="flex-grow-1">
+                      <div className="fw-semibold small">7 day free trial of Behance Pro</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Supercharge your creative career with Behance Pro</div>
+                    </div>
+                    <i className="bi bi-arrow-right ms-auto text-muted"></i>
+                  </a>
+                </div>
+              )
+            </div>
           </Nav>
         </Container>
       </Navbar>
